@@ -28,8 +28,15 @@ export class ManageUsers extends BasePage {
   private readonly loginHistoryPopupTitle = "div[class='login-history-popup active'] h2";
   private readonly goToLoginHistoryButton = "div[class='login-history-popup active'] a[class='button']";
   private readonly loginRecordsTitle = "div[class='template-title'] h1";
+  private readonly editUserButton = "div[username-data='teyo'] a[class='manage-user-edit-button']";
+  private readonly generateNewPasswordButton = "#generate-password-button";
+  private readonly generateNewPasswordPopupNo = "(//button[@type='button'][normalize-space()='No'])[1]";
+  private readonly updateUserRoleField = "(//div[@class='custom-select-dropdown-title'])[2]";
+  private readonly updatedUserRole = "li[data-value='manager']";
+  private readonly updatedUserCompanyName = "#comapany-name-field";
+  private readonly updatedUserSubmitButton = "#confirm-submit-popup-button";
+  private readonly updatedUserSubmitYes = "#confirm-submit";
   
-
   public getManageUserButton(): string {
   return this.manageUserButton;
   }
@@ -112,6 +119,38 @@ export class ManageUsers extends BasePage {
 
   public getLoginRecordsTitle(): string {
     return this.loginRecordsTitle;
+  }
+
+  public getEditUserButton(): string {
+    return this.editUserButton;
+  }
+
+  public getGenerateNewPasswordButton(): string {
+    return this.generateNewPasswordButton;
+  }
+
+  public getGenerateNewPasswordPopupNo(): string {
+    return this.generateNewPasswordPopupNo;
+  }
+
+  public getUpdateUserRoleField(): string {
+    return this.updateUserRoleField;
+  }
+
+  public getUpdatedUserRole(): string {
+    return this.updatedUserRole;
+  }
+
+  public getUpdatedUserCompanyName(): string {
+    return this.updatedUserCompanyName;
+  }
+
+  public getUpdatedUserSubmitButton(): string {
+    return this.updatedUserSubmitButton;
+  }
+
+  public getUpdatedUserSubmitYes(): string {
+    return this.updatedUserSubmitYes;
   }
 
 }
