@@ -2,7 +2,7 @@ import { Page } from "@playwright/test";
 import { BasePage } from "./Basepage";
 import { formatDateForDisplay } from "../../../utils/dateUtils";
 
-export class ManageUsersPage extends BasePage {
+export class ManageUsers extends BasePage {
   constructor(page: Page) {
     super(page);
   }
@@ -18,6 +18,17 @@ export class ManageUsersPage extends BasePage {
   private readonly emailField = "#email-field";
   private readonly userSubmitButton = "#confirm-submit-popup-button";
   private readonly userSubmitButtonYes = "#confirm-submit";
+  private readonly searchField = "#manage-user-search";
+  private readonly selectStateField = "//button[@class='filter-select-title select-states']";
+  private readonly selectState = "li[data-value='Active']";
+  private readonly selectRoleField = ".filter-select-title.select-roles";
+  private readonly selecUsertRole = "//li[@data-value='Admin']";
+  private readonly searchButton = "#agqa-user-filters";
+  private readonly usertLoginHistoryButton = "div[class='custom-table-row active'] button[class='login-history-icon']";
+  private readonly loginHistoryPopupTitle = "div[class='login-history-popup active'] h2";
+  private readonly goToLoginHistoryButton = "div[class='login-history-popup active'] a[class='button']";
+  private readonly loginRecordsTitle = "div[class='template-title'] h1";
+  
 
   public getManageUserButton(): string {
   return this.manageUserButton;
@@ -61,6 +72,46 @@ export class ManageUsersPage extends BasePage {
 
   public getUserSubmitButtonYes(): string {
     return this.userSubmitButtonYes;
+  }
+
+  public getSearchField(): string {
+  return this.searchField;
+  }
+
+  public getSelectStateField(): string {
+    return this.selectStateField;
+  }
+
+  public getSelectState(): string {
+    return this.selectState;
+  }
+
+  public getSelectRoleField(): string {
+    return this.selectRoleField;
+  }
+
+  public getSelecUsertRole(): string {
+    return this.selecUsertRole;
+  }
+
+  public getSearchButton(): string {
+    return this.searchButton;
+  }
+
+  public getUsertLoginHistoryButton(): string {
+    return this.usertLoginHistoryButton;
+  }
+
+  public getLoginHistoryPopupTitle(): string {
+    return this.loginHistoryPopupTitle;
+  }
+
+  public getGoToLoginHistoryButton(): string {
+    return this.goToLoginHistoryButton;
+  }
+
+  public getLoginRecordsTitle(): string {
+    return this.loginRecordsTitle;
   }
 
 }
