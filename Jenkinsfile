@@ -31,7 +31,6 @@ pipeline {
     
     post {
         always {
-            // This block will run after all stages
             echo 'Cleaning up...'
         }
         
