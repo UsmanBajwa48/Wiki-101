@@ -4,7 +4,7 @@ import { ManageUsers } from "../pages/src/pages/ManageUsers";
 import { faker } from '@faker-js/faker';
 
 
-test("TC01 - Add new user", async ({ page }) => { 
+test("TC01 - addNewUserTest", async ({ page }) => { 
     
     const userAccount = faker.internet.username().replace(/[^a-zA-Z0-9]/g, '');
     const userEmail = faker.internet.email();

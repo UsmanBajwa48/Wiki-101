@@ -3,7 +3,7 @@ import { LoginPage } from "../pages/src/pages/LoginPage";
 import { ManageUsers } from "../pages/src/pages/ManageUsers";
 
 
-test("TC01 - Search user from users list", async ({ page }) => { 
+test("TC03 - editUserTest", async ({ page }) => { 
     
     const login = new LoginPage(page);
     const edituser = new ManageUsers(page);
@@ -15,7 +15,7 @@ test("TC01 - Search user from users list", async ({ page }) => {
     await edituser.clickElement(edituser.getGenerateNewPasswordPopupNo());
     await edituser.clickElement(edituser.getUpdateUserRoleField());
     await edituser.clickElement(edituser.getUpdatedUserRole());
-    await edituser.fillField(edituser.getUpdatedUserCompanyName(), 'Microsoft12');
+    await edituser.fillField(edituser.getUpdatedUserCompanyName(), 'bogesa5341');
     await edituser.clickElement(edituser.getUpdatedUserSubmitButton());
     await edituser.clickElement(edituser.getUpdatedUserSubmitYes());
 

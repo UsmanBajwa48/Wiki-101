@@ -28,7 +28,7 @@ export class ManageUsers extends BasePage {
   private readonly loginHistoryPopupTitle = "div[class='login-history-popup active'] h2";
   private readonly goToLoginHistoryButton = "div[class='login-history-popup active'] a[class='button']";
   private readonly loginRecordsTitle = "div[class='template-title'] h1";
-  private readonly editUserButton = "div[username-data='teyo'] a[class='manage-user-edit-button']";
+  private readonly editUserButton = "(//a[@class='manage-user-edit-button'])[8]";
   private readonly generateNewPasswordButton = "#generate-password-button";
   private readonly generateNewPasswordPopupNo = "(//button[@type='button'][normalize-space()='No'])[1]";
   private readonly updateUserRoleField = "(//div[@class='custom-select-dropdown-title'])[2]";

@@ -4,7 +4,7 @@ import { FAQPage } from "../pages/src/pages/FAQ";
 import { faker } from '@faker-js/faker';
 
 
-test("TC01 - Add new user", async ({ page }) => { 
+test("TC04 - addFAQTest", async ({ page }) => { 
     
     const title = faker.lorem.words(5); 
     const description = faker.lorem.paragraphs(2); 
