@@ -22,7 +22,7 @@ export class ManageUsers extends BasePage {
   private readonly selectStateField = "//button[@class='filter-select-title select-states']";
   private readonly selectState = "li[data-value='Active']";
   private readonly selectRoleField = ".filter-select-title.select-roles";
-  private readonly selecUsertRole = "//li[@data-value='Admin']";
+  private readonly selecUsertRole = "li[data-value='Manager']";
   private readonly searchButton = "#agqa-user-filters";
   private readonly usertLoginHistoryButton = "div[class='custom-table-row active'] button[class='login-history-icon']";
   private readonly loginHistoryPopupTitle = "div[class='login-history-popup active'] h2";
